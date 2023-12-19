@@ -18,19 +18,22 @@ public class HelloWorldService extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+        response.setContentType("text/plain");
+        PrintWriter out = response.getWriter();
+
         // precondition enforcement -- no parameters expected
         Map<String,String[]> parameters = request.getParameterMap();
         if (!parameters.isEmpty()) {
             String parametersAsString = getParametersAsString(request);
             Logger logger = LogManager.getLogger(HelloWorldService.class);
             logger.error("unexpected parameters: " + parametersAsString);
-            response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+            out.println("unexpected parameters, the problem has been logged");
+        }
+        else {
+            out.println("hi");
         }
 
-        // some actual data processing (mocked)
-        response.setContentType("text/plain");
-        PrintWriter out = response.getWriter();
-        out.println("hello world");
         out.close();
     }
 

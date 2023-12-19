@@ -62,6 +62,4 @@ public class Log4ShellTest {
         assertTrue(file.exists());
     }
 
-
-
 }
