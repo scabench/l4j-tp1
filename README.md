@@ -28,6 +28,9 @@ To run the test build the project with `mvn test`.
 4. submit this form
 5. this will create a file `foo` on the server
 
+### Running Software Composition Analyses
+
+There are several sh scripts to run different analyses, result resports can be found in `scan-results`.
 
 
 
