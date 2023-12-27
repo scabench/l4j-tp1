@@ -20,7 +20,7 @@ The test will create a file `foo` based on a command encoded embedded in the cod
 
 To run the test build the project with `mvn test`.
 
-### Demonstrating running the Application
+### Demonstrating the Vulnerability running the Application
 
 1. start the embedded web server: `mvn jetty:run`
 2. start the included the ldap server: `java -jar dodgy-ldap-server.jar` (the vulnerable copde will download Java code from this server)
