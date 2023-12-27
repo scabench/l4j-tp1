@@ -32,5 +32,9 @@ To run the test build the project with `mvn test`.
 
 There are several sh scripts to run different analyses, result resports can be found in `scan-results`.
 
+### Generating the SBOM
 
+The `pom.xml` has a plugin to generate a [SBOM](https://www.cisa.gov/sbom) in [CycloneDX](https://cyclonedx.org/) format. 
+To do this, run `mvn cyclonedx:makePackageBom`, the SBOM can be found in 
+`target/` in `json` and `xml` format.
 
