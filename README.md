@@ -10,7 +10,7 @@ The vulnerable dependency is [org.apache.logging.log4j:log4j-core:2.14.1](https:
 
 ### Demonstrating the Vulnerability using a Test 
 
-This requires unix or macos. It is easy to port this project to windowsm, 
+This requires unix or macos. It is easy to port this project to windows. 
 
 A unit test is provided to demonstrate the vulnerability. The test requires a ldap server providing vulnerable code, the respective executable is provided by the project, it is defined in a separate project [https://github.com/jensdietrich/Log4J-RCE-Proof-Of-Concept](https://github.com/jensdietrich/Log4J-RCE-Proof-Of-Concept) based on [https://github.com/HyCraftHD/Log4J-RCE-Proof-Of-Concept](https://github.com/HyCraftHD/Log4J-RCE-Proof-Of-Concept).
 The test fixture will handle startup and shutdown of the ldap server.
